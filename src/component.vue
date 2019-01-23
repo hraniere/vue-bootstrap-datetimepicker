@@ -35,6 +35,14 @@
         type: Boolean,
         default: false
       },
+
+      /**
+       * Specify if the output to v-model will be formated or not
+       */
+      formatModelOutput: {
+        type: Boolean,
+        default: false
+      },
     },
     data() {
       return {
@@ -89,9 +97,11 @@
        * @param event
        */
       onChange(event) {
-        //        let formattedDate = event.date ? event.date.format(this.dp.format()) : null;
-        //        this.$emit('input', formattedDate);
-        this.$emit('input', event.date);
+        if (this.formatModelOutput) {
+          let formattedDate = event.date ? event.date.format(this.dp.format()) : null;
+          this.$emit('input', formattedDate);
+        } else
+          this.$emit('input', event.date);
       },
 
       /**
