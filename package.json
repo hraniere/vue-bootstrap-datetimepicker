@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ankurk91/vue-bootstrap-datetimepicker.git"
+    "url": "git+https://github.com/hraniere/vue-bootstrap-datetimepicker.git"
   },
   "keywords": [
     "vue",
