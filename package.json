@@ -32,7 +32,8 @@
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development webpack-serve --config=webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --progress --mode production",
-    "prepublishOnly": "npm run test && npm run build"
+    "prepublishOnly": "npm run test && npm run build",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "pc-bootstrap4-datetimepicker": "^4.17.50"
