@@ -101,7 +101,7 @@
           let formattedDate = event.date ? event.date.format(this.dp.format()) : null;
           this.$emit('input', formattedDate);
         } else
-          this.$emit('input', event.date);
+          this.$emit('input', event.date ? event.date : null);
       },
 
       /**
